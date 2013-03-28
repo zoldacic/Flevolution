@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="Flevolution" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2012-10.1.8">
+  <Role name="MvcWebRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=flevolutionstorage;AccountKey=zRcIpddGPnGxaPzUjscYYv2HBHZWUce9D5bvM8YdIrpw6cMnYgDPtucuOQ5vKToLC0a5FCYauoq2iI2W2rohaw==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="fluxx" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEA1AU9tAowWrTdVDvVzTDgswDQYJKoZIhvcNAQEBBQAEggEAsZ8AeTQiy/ycBZgkUEqP+uoclLBTmsfGFeWz7emK6wUqonrxZ0uZObXR0IVFk/ETuxd+rakg2+AhrQj66arzzsiv9V5aXK/PtXVR/h+WOyB60WJDqEknI6myJc7AmQi1p1hdKv0BNQtWZAe7+wt7r3TSse761lZOvOypUci6maBsTXEgPJeK5zW4MB75x6xLj/N3hqrtrFnSl4f4DCJCqyjr96LOSYW3RUszCFe1mQCsV1ncj49Lf6EW8vex69lz/tGe+qlCI4YtGQKIkl5u7oqBOWjzDVOuINqTREazxoeiLK/TFCuSD1UljDP6N5LbVNGDui88bm7WsVr4YSnlvTAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECHrA0O0ALwQ2gBDpAfU8jxqNtIKzYRfBfz1/" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2014-03-02T23:59:59.0000000+01:00" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="477340B4D26F19733BF6A6E4332C03CFB8E3166F" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+  <Role name="WorkerRole">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="DefaultEndpointsProtocol=https;AccountName=flevolutionstorage;AccountKey=zRcIpddGPnGxaPzUjscYYv2HBHZWUce9D5bvM8YdIrpw6cMnYgDPtucuOQ5vKToLC0a5FCYauoq2iI2W2rohaw==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="fluxx" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEA1AU9tAowWrTdVDvVzTDgswDQYJKoZIhvcNAQEBBQAEggEAsZ8AeTQiy/ycBZgkUEqP+uoclLBTmsfGFeWz7emK6wUqonrxZ0uZObXR0IVFk/ETuxd+rakg2+AhrQj66arzzsiv9V5aXK/PtXVR/h+WOyB60WJDqEknI6myJc7AmQi1p1hdKv0BNQtWZAe7+wt7r3TSse761lZOvOypUci6maBsTXEgPJeK5zW4MB75x6xLj/N3hqrtrFnSl4f4DCJCqyjr96LOSYW3RUszCFe1mQCsV1ncj49Lf6EW8vex69lz/tGe+qlCI4YtGQKIkl5u7oqBOWjzDVOuINqTREazxoeiLK/TFCuSD1UljDP6N5LbVNGDui88bm7WsVr4YSnlvTAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECHrA0O0ALwQ2gBDpAfU8jxqNtIKzYRfBfz1/" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2014-03-02T23:59:59.0000000+01:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="477340B4D26F19733BF6A6E4332C03CFB8E3166F" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

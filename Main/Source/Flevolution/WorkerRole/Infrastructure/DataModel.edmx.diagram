@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c9c8166f838a4468a76ee672b0759a5a" Name="Diagram1" ZoomLevel="94" >
+        <EntityTypeShape EntityType="DataModel.Area" Width="1.5" PointX="0.625" PointY="1.125" />
+        <EntityTypeShape EntityType="DataModel.Scoreboard" Width="1.5" PointX="4" PointY="1.5" />
+        <EntityTypeShape EntityType="DataModel.Player" Width="1.5" PointX="6.75" PointY="1.125" />
+        <EntityTypeShape EntityType="DataModel.Session" Width="1.5" PointX="7.125" PointY="3.875" />
+        <EntityTypeShape EntityType="DataModel.PlayerHouses" Width="1.5" PointX="2" PointY="4.125" />
+        <AssociationConnector Association="DataModel.ScoreboardPlayer" />
+        <AssociationConnector Association="DataModel.SessionPlayer" />
+        <AssociationConnector Association="DataModel.ScoreboardSession" />
+        <AssociationConnector Association="DataModel.PlayerHousesPlayer" />
+        <AssociationConnector Association="DataModel.PlayerHousesArea" />
+        <AssociationConnector Association="DataModel.PlayerHousesSession" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

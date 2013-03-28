@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "Flevolution", "Flevolution\Flevolution.ccproj", "{279EC3BA-D88D-42EE-9A33-7CF045B97BEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcWebRole", "MvcWebRole\MvcWebRole.csproj", "{E27EC8DA-B666-47EC-94B3-BA14C3B5B2C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerRole", "WorkerRole\WorkerRole.csproj", "{5A8DB6F5-98E2-4011-8AF9-DE7BE01320B7}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://fluxx.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Flevolution\\Flevolution.ccproj
+		SccProjectName1 = Flevolution
+		SccLocalPath1 = Flevolution
+		SccProjectUniqueName2 = MvcWebRole\\MvcWebRole.csproj
+		SccProjectName2 = MvcWebRole
+		SccLocalPath2 = MvcWebRole
+		SccProjectUniqueName3 = WorkerRole\\WorkerRole.csproj
+		SccProjectName3 = WorkerRole
+		SccLocalPath3 = WorkerRole
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{279EC3BA-D88D-42EE-9A33-7CF045B97BEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{279EC3BA-D88D-42EE-9A33-7CF045B97BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{279EC3BA-D88D-42EE-9A33-7CF045B97BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{279EC3BA-D88D-42EE-9A33-7CF045B97BEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E27EC8DA-B666-47EC-94B3-BA14C3B5B2C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E27EC8DA-B666-47EC-94B3-BA14C3B5B2C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E27EC8DA-B666-47EC-94B3-BA14C3B5B2C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E27EC8DA-B666-47EC-94B3-BA14C3B5B2C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A8DB6F5-98E2-4011-8AF9-DE7BE01320B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A8DB6F5-98E2-4011-8AF9-DE7BE01320B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A8DB6F5-98E2-4011-8AF9-DE7BE01320B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A8DB6F5-98E2-4011-8AF9-DE7BE01320B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

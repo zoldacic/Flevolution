@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "StartGame";
+}
+
+<map id ="biddingboardmap" name="biddingboardmap">
+  <area shape ="rect" coords ="21, 21, 167, 107"  onmouseover="javascript:biddingPersonClick('general');" />
+  <area shape ="rect" coords ="181, 21, 327, 107" onmouseover="javascript:biddingPersonClick('captain');" />
+  <area shape ="rect" coords ="341, 21, 487, 107" onmouseover="javascript:biddingPersonClick('innkeeper');" />
+  <area shape ="rect" coords ="499, 21, 645, 107" onmouseover="javascript:biddingPersonClick('magistrate');" />
+
+  <area shape ="rect" coords ="21, 122, 167, 210"  onmouseover="javascript:biddingPersonClick('priest');" />
+  <area shape ="rect" coords ="181, 122, 327, 210" onmouseover="javascript:biddingPersonClick('aristocrat');" />
+  <area shape ="rect" coords ="341, 122, 487, 210" onmouseover="javascript:biddingPersonClick('merchant');" />
+  <area shape ="rect" coords ="499, 122, 645, 210" onmouseover="javascript:biddingPersonClick('printer');" />
+
+  <area shape ="rect" coords ="21, 225, 167, 313"  onmouseover="javascript:biddingPersonClick('rogue');" />
+  <area shape ="rect" coords ="181, 225, 327, 313" onmouseover="javascript:biddingPersonClick('spy');" />
+  <area shape ="rect" coords ="341, 225, 487, 313" onmouseover="javascript:biddingPersonClick('apothecary');" />
+  <area shape ="rect" coords ="499, 225, 645, 313" onmouseover="javascript:biddingPersonClick('mercenary');" />
+</map>
+
+<div style="display: block; position: relative; top: 0px; left: 70px; " >
+<img id="biddingboard" src ="../../Images/BiddingBoard.jpg" width="667" height="368" style="display: block; position: absolute; top: 0px; left: 50px; z-index: 2"  border="0" alt="Bidding Board" usemap ="#biddingboardmap" />
+
+<img id="general"       src ="../../Images/BiddingBrick.png" width="146" height="89" style="display: block; position: absolute; top: 20px; left: 70px;    z-index: 1"  border="0" alt="General" />
+<img id="captain"       src ="../../Images/BiddingBrick.png" width="146" height="89" style="display: block; position: absolute; top: 20px; left: 230px;   z-index: 1"  border="0" alt="Captain" />
+<img id="innkeeper"     src ="../../Images/BiddingBrick.png" width="146" height="89" style="display: block; position: absolute; top: 20px; left: 389px;   z-index: 1"  border="0" alt="Innkeeper" />
+<img id="magistrate"    src ="../../Images/BiddingBrick.png" width="146" height="89" style="display: block; position: absolute; top: 20px; left: 547px;   z-index: 1"  border="0" alt="Magistrate" />
+
+<img id="priest"        src ="../../Images/BiddingBrick.png" width="146" height="89" style="display: block; position: absolute; top: 123px; left: 70px;  z-index: 1"  border="0" alt="Priest" />
+<img id="aristocrat"    src ="../../Images/BiddingBrick.png" width="146" height="89" style="display: block; position: absolute; top: 123px; left: 230px; z-index: 1"  border="0" alt="Aristocrat" />
+<img id="merchant"      src ="../../Images/BiddingBrick.png" width="146" height="89" style="display: block; position: absolute; top: 123px; left: 389px; z-index: 1"  border="0" alt="Merchant" />
+<img id="printer"       src ="../../Images/BiddingBrick.png" width="146" height="89" style="display: block; position: absolute; top: 123px; left: 547px; z-index: 1"  border="0" alt="Printer" />
+
+<img id="rogue"         src ="../../Images/BiddingBrick.png" width="146" height="89" style="display: block; position: absolute; top: 226px; left: 70px; z-index: 1"  border="0" alt="Rogue" />
+<img id="spy"           src ="../../Images/BiddingBrick.png" width="146" height="89" style="display: block; position: absolute; top: 226px; left: 230px; z-index: 1"  border="0" alt="Spy" />
+<img id="apothecary"    src ="../../Images/BiddingBrick.png" width="146" height="89" style="display: block; position: absolute; top: 226px; left: 389px; z-index: 1"  border="0" alt="Apothecary" />
+<img id="mercenary"     src ="../../Images/BiddingBrick.png" width="146" height="89" style="display: block; position: absolute; top: 226px; left: 547px; z-index: 1"  border="0" alt="Mercenary" />
+
+<img id="plus"  src="../../Images/Plus.png"  style="display: block; position: relative; top: 0px; left: 0px; z-index: 1; visibility: hidden"  border="0" onmouseup="plusClick()" />
+<img id="minus" src="../../Images/Minus.png" style="display: block; position: relative; top: 0px; left: 0px; z-index: 1; visibility: hidden"  border="0" onmouseup="plusClick()" />
+
+</div> 
+   <script type="text/javascript">
+       function biddingPersonClick(biddingBrickImage) {
+           document.getElementById('general').style.zIndex = 1;
+           document.getElementById('captain').style.zIndex = 1;
+           document.getElementById('innkeeper').style.zIndex = 1;
+           document.getElementById('magistrate').style.zIndex = 1;
+           document.getElementById('priest').style.zIndex = 1;
+           document.getElementById('aristocrat').style.zIndex = 1;
+           document.getElementById('merchant').style.zIndex = 1;
+           document.getElementById('printer').style.zIndex = 1;
+           document.getElementById('rogue').style.zIndex = 1;
+           document.getElementById('spy').style.zIndex = 1;
+           document.getElementById('apothecary').style.zIndex = 1;
+           document.getElementById('mercenary').style.zIndex = 1;
+
+           var brick = document.getElementById(biddingBrickImage);
+           brick.style.zIndex = 3;
+
+           setupPlus(brick);
+           setupMinus(brick);
+       }
+
+       function setupPlus(brick) {
+           var plus = document.getElementById('plus');
+           plus.style.zIndex = 3;
+           plus.style.top = brick.style.top;
+           plus.style.left = brick.style.left;
+           plus.style.visibility = "visible";
+           plus.setAttribute("data-brick", brick.id);
+       }
+
+       function setupMinus(brick) {
+           var minus = document.getElementById('minus');
+           minus.style.zIndex = 3;
+           minus.style.top = brick.style.top + 55;
+           minus.style.left = brick.style.left;
+           minus.style.visibility = "visible";
+           minus.setAttribute("data-brick", brick.id);
+       }
+
+       function plusClick() {
+           var plus = document.getElementById('plus');
+           //var plus = $("#plus");
+           //var brickId = plus.dataset.brick; //plus.getAttribute("data-brick");
+           var brickId = plus.getAttribute("data-brick");
+           alert('Clicked ' + brickId);
+
+           var url = '@Url.Action("GamePlay", "AddBid")';
+           $.post(url, { brickId: brickId},
+           function (data) {
+           });
+
+           //for (var i = 0; i < data.length; i++) {
+           //    productDropdown.append('<option value?+data[i].productid+?="">' + data[i].ProductName + '</option>');
+           //}
+       }
+
+       function minusClick() {
+           var minus = document.getElementById('minus');
+           alert('Clicked ' + minus.getAttribute("data-brick"));
+       }
+    </script>
