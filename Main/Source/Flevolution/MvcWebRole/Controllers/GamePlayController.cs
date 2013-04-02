@@ -3,18 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MvcWebRole.Models;
 
 namespace MvcWebRole.Controllers
 {
     public class GamePlayController : Controller
     {
-        //
-        // GET: /GamePlay/StartGame
-
         public ActionResult StartGame()
         {
-            return View();
+            var gamePlayModel = new GamePlayModel()
+                {
+                    //Characters = 
+                };
+            
+
+            return View(gamePlayModel);
         }
 
+        public ActionResult AddBid(string brickId)
+        {
+            return new JsonResult() { };
+        }
     }
 }

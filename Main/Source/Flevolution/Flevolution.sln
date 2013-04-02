@@ -7,22 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcWebRole", "MvcWebRole\Mv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerRole", "WorkerRole\WorkerRole.csproj", "{5A8DB6F5-98E2-4011-8AF9-DE7BE01320B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService1", "WcfService1\WcfService1.csproj", "{0CA7F273-A9E8-444C-87C2-A02577287989}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://fluxx.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Flevolution\\Flevolution.ccproj
-		SccProjectName1 = Flevolution
-		SccLocalPath1 = Flevolution
-		SccProjectUniqueName2 = MvcWebRole\\MvcWebRole.csproj
-		SccProjectName2 = MvcWebRole
-		SccLocalPath2 = MvcWebRole
-		SccProjectUniqueName3 = WorkerRole\\WorkerRole.csproj
-		SccProjectName3 = WorkerRole
-		SccLocalPath3 = WorkerRole
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -40,6 +27,10 @@ Global
 		{5A8DB6F5-98E2-4011-8AF9-DE7BE01320B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A8DB6F5-98E2-4011-8AF9-DE7BE01320B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A8DB6F5-98E2-4011-8AF9-DE7BE01320B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CA7F273-A9E8-444C-87C2-A02577287989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CA7F273-A9E8-444C-87C2-A02577287989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CA7F273-A9E8-444C-87C2-A02577287989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CA7F273-A9E8-444C-87C2-A02577287989}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
