@@ -5,29 +5,28 @@ using System.ServiceModel;
 using System.Web;
 using System.Web.Mvc;
 using Contracts;
+using Domain.Services;
 using MvcWebRole.Models;
 
 namespace MvcWebRole.Controllers
 {
     public class GamePlayController : Controller
     {
-        private string serviceUrl = "net.tcp://127.255.0.1:9001/GameService";
-
-        private IGameService GetAProxy()
+        private IGameService GetGameService()
         {
-            NetTcpBinding binding = new NetTcpBinding(SecurityMode.None);
-            EndpointAddress endpointAddress = new EndpointAddress(serviceUrl);
-
-            var factory = new ChannelFactory<IGameService>(binding, endpointAddress).CreateChannel();
-            return factory;
+            return new GameService();
         }
 
         public ActionResult StartGame()
         {
-            var characters = GetAProxy().GetCharacters();
+            var characters = GetGameService().GetCharacters();
             var gamePlayModel = new GamePlayModel()
             {
-                
+                Characters = from c in characters
+                             select new CharacterModel() { 
+                                 Id = c.Id,
+                                 Name = c.Name
+                             }
             };
 
             return View(gamePlayModel);

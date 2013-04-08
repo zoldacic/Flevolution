@@ -7,10 +7,8 @@ using System.Text;
 
 namespace Contracts
 {
-    [ServiceContract]
     public interface IGameService
     {
-        [OperationContract]
         IEnumerable<Character> GetCharacters();
     }
 }

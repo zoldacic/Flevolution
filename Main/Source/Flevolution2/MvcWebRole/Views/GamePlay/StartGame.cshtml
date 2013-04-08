@@ -1,16 +1,50 @@
-﻿@{
+﻿@model MvcWebRole.Models.GamePlayModel
+
+@{
     ViewBag.Title = "StartGame";
 }
 
+<script>
+    function setAreaCoords(area, i) {
+        switch (i) {
+        case 0:
+            area.coords = "21, 21, 167, 107";
+        case 1:
+            area.coords = "181, 21, 327, 107";
+        case 2:
+            area.coords = "341, 21, 487, 107";
+        case 3:
+            area.coords = "499, 21, 645, 107";
+        case 4:
+            area.coords = "21, 122, 167, 210";
+        case 5:
+            area.coords = "181, 122, 327, 210";
+        case 6:
+            area.coords = "341, 122, 487, 210";
+        case 7:
+            area.coords = "499, 122, 645, 210";
+        case 8:
+            area.coords = "21, 225, 167, 313";
+        case 9:
+            area.coords = "181, 225, 327, 313";
+        case 10:
+            area.coords = "341, 225, 487, 313";
+        case 11:
+            area.coords = "499, 225, 645, 313";
+        }
+    }
+</script>
+
 <map id ="biddingboardmap" name="biddingboardmap">
-    @{           
-        for (var i = 0; i < Model.Characters.Count; i++)
+    @{
+        var characters = Model.Characters.ToList();
+        for (var i = 0; i < characters.Count(); i++)
         {
-            var areaId = @Model.Characters[i].GetId() + "Area";
-            <area id='@areaId' shape ="rect" coords ="21, 21, 167, 107"  onmouseover="javascript:biddingPersonClick(@Model.Characters[i].Id, '@Model.Characters[i].Name'); " />
+            var areaId = "Character" + characters[i].Id;
+            <area id='@areaId' shape ="rect" coords ="21, 21, 167, 107"  onmouseover="javascript:biddingPersonClick(@areaId, '@characters[i].Name'); " />
             
             <script>
-                setAreaCoords(areaId, i);
+                var areaCoords = setAreaCoords(@areaId, @i);
             </script>
         }
     }
@@ -101,8 +135,8 @@
 
            var url = '@Url.Action("AddBid", "GamePlay")';
            $.getJSON(url, { brickId: brickId},
-           function (data) {
-           });
+               function (data) {
+               });
 
            //for (var i = 0; i < data.length; i++) {
            //    productDropdown.append('<option value?+data[i].productid+?="">' + data[i].ProductName + '</option>');
@@ -113,34 +147,4 @@
            var minus = document.getElementById('minus');
            alert('Clicked ' + minus.getAttribute("data-brick"));
        }
-       
-       function setAreaCoords(areaId, i) {
-           var area = document.getElementById(areaId);
-           switch(i) {
-               case 0: area.coords = "21, 21, 167, 107";
-               case 1:
-                   area.coords = "181, 21, 327, 107";
-               case 2:
-                   area.coords = "341, 21, 487, 107";
-               case 3:
-                   area.coords = "499, 21, 645, 107";
-               case 4:
-                   area.coords = "21, 122, 167, 210";
-               case 5:
-                   area.coords = "181, 122, 327, 210";
-               case 6:
-                   area.coords = "341, 122, 487, 210";
-               case 7:
-                   area.coords = "499, 122, 645, 210";
-               case 8:
-                   area.coords = "21, 225, 167, 313";
-               case 9:
-                   area.coords = "181, 225, 327, 313";
-               case 10:
-                   area.coords = "341, 225, 487, 313";
-               case 11:
-                   area.coords = "499, 225, 645, 313";
-           }
-       }
-
-    </script>
+   </script>
