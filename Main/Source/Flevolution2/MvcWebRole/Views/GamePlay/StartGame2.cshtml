@@ -1,0 +1,70 @@
+﻿@{
+    ViewBag.Title = "StartGame2";
+}
+
+<h2>StartGame2</h2>
+
+<div>
+    <div data-bind="foreach: characters">
+        <div style="float: left">
+            <table>
+                <tr>
+                    <td>
+                        <div style="float: left">
+                            <img src="~/Images/gold.png" width="24" height="24" alt="Gold" />
+                        </div>
+                        <div style="float: left">A</div>
+                        <div style="float: left">
+                            <img src="~/Images/blackmail.png" width="24" height="24" alt="Blackmail" />
+                        </div>
+                        <div style="float: left">B</div>
+                        <div style="float: left">
+                            <img src="~/Images/force.png" width="24" height="24" alt="Force" />
+                        </div>
+                        <div style="float: left"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img data-bind="attr: { src: imagepath, alt: name }" alt="Character" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong data-bind="text: name" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div style="clear: both; ">
+    <div>Gold <input type="radio" title="Gold"  /></div>
+    <div>Blackmail <input type="radio" title="Blackmail" /></div>
+    <div>Force <input type="radio" title="Force" /></div>
+</div>
+
+<script type="text/javascript">
+    function Character(item) {
+        var self = this;
+        self.id = item.Id;        
+        self.name = item.Name;
+        //self.imagepath = "../Images/char_" + item.Name + ".jpg";
+        self.imagepath = "../Images/char_general.jpg";
+    }
+
+    function CharacterViewModel() {
+        var self = this;
+        self.characters = ko.observableArray([]);
+
+        // Load characters
+        $.post("/GamePlay/GetCharacters", null, function (allServerCharacters) {
+            var mappedCharacters = $.map(allServerCharacters, function (serverCharacter) { return new Character(serverCharacter); });
+            self.characters(mappedCharacters);
+        });
+    }
+
+    ko.applyBindings(new CharacterViewModel());
+
+</script>

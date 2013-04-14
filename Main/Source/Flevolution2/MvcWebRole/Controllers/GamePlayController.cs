@@ -32,9 +32,21 @@ namespace MvcWebRole.Controllers
             return View(gamePlayModel);
         }
 
+        public ActionResult StartGame2()
+        {
+            return View();
+        }
+
         public ActionResult AddBid(string brickId)
         {
             return new JsonResult() { };
+        }
+
+        [HttpPost]
+        public JsonResult GetCharacters()
+        {
+            var characters = GetGameService().GetCharacters().ToList();
+            return Json(characters);
         }
     }
 }

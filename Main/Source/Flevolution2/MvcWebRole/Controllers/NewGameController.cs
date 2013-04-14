@@ -15,7 +15,7 @@ namespace MvcWebRole.Controllers
 
         public ActionResult PlayHuman()
         {
-            return RedirectToAction("StartGame", "GamePlay");
+            return RedirectToAction("StartGame2", "GamePlay");
         }
     }
 }
