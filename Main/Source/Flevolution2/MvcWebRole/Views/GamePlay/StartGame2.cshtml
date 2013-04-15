@@ -39,10 +39,14 @@
     </div>
 </div>
 
+@Html.RadioButton
+
 <div style="clear: both; ">
-    <div>Gold <input type="radio" title="Gold"  /></div>
-    <div>Blackmail <input type="radio" title="Blackmail" /></div>
-    <div>Force <input type="radio" title="Force" /></div>
+    <table>
+    <tr><td>Gold</td><td style="text-align: left"><input data-bind="click: selectCurrency" type="radio" name="currencySelection" style="width:30px" title="Gold" /></td>
+    <td>Blackmail</td><td style="text-align: left"> <input data-bind="click: selectCurrency" style="width:30px" name="currencySelection" type="radio" title="Blackmail" /></td>
+    <td>Force</td><td style="text-align: left"> <input data-bind="click: selectCurrency" style="width:30px" name="currencySelection" type="radio" title="Force" /></td></tr>
+    </table>
 </div>
 
 <script type="text/javascript">
@@ -63,6 +67,11 @@
             var mappedCharacters = $.map(allServerCharacters, function (serverCharacter) { return new Character(serverCharacter); });
             self.characters(mappedCharacters);
         });
+
+        // Event handler for currency selection
+        self.selectCurrency = function () {
+            $.post("/GamePlay/SetCurrentCurrency", null)
+        }
     }
 
     ko.applyBindings(new CharacterViewModel());
