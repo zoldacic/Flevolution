@@ -1,15 +1,15 @@
 ﻿@{
-    ViewBag.Title = "StartGame2";
+    ViewBag.Title = "StartGame";
 }
 
-<h2>StartGame2</h2>
+<h2>StartGame</h2>
 
 <div>
     <div data-bind="foreach: characters">
-        <div style="float: left">
-            <table>
-                <tr>
-                    <td>
+        @*<div class="character">*@
+            <div class="character divTable" >
+                <div class="divTableRow">
+                    <div class="divTableCell">                   
                         <div style="float: left">
                             <img src="~/Images/gold.png" width="24" height="24" alt="Gold" />
                         </div>
@@ -22,24 +22,22 @@
                             <img src="~/Images/force.png" width="24" height="24" alt="Force" />
                         </div>
                         <div style="float: left"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
+                    </div>
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableCell">
                         <img data-bind="attr: { src: imagepath, alt: name }" alt="Character" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
+                    </div>
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableCell">
                         <strong data-bind="text: name" />
-                    </td>
-                </tr>
-            </table>
-        </div>
+                    </div>
+                </div>
+            </div>
+        @*</div>*@
     </div>
 </div>
-
-@Html.RadioButton
 
 <div style="clear: both; ">
     <table>
@@ -69,9 +67,9 @@
         });
 
         // Event handler for currency selection
-        self.selectCurrency = function () {
-            $.post("/GamePlay/SetCurrentCurrency", null)
-        }
+        self.selectCurrency = function() {
+            $.post("/GamePlay/SetCurrentCurrency", null);
+        };
     }
 
     ko.applyBindings(new CharacterViewModel());

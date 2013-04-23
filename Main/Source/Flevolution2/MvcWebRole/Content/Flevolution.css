@@ -1,0 +1,91 @@
+﻿/*.character {
+    characterText;
+    characterTransition;
+
+}*/
+
+/*.characterStyle {*/
+.character {
+    color: #ffffff;
+    font-family: arial;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid #eeb44f;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #cc9f52;    
+
+    /* "Button" layout */
+    -moz-box-shadow: inset 0px 1px 0px 0px #fce2c1;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #fce2c1;
+    box-shadow: inset 0px 1px 0px 0px #fce2c1;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
+    background: -moz-linear-gradient( center top, #ffc477 5%, #fb9e25 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25');
+    background-color: #ffc477;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    display: inline-block;
+
+        padding: 6px 24px;
+/*}
+
+.characterTransition
+{*/
+    float: left;
+    -webkit-transition: all 1s;
+}
+
+.character:hover
+{
+    -webkit-transform: rotate(360deg);
+
+    -moz-box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+    box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+    background: -moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+    background-color: #79bbff;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #84bbf3;
+    display: inline-block;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #528ecc;
+}
+
+/*@font-face
+{
+    font-family: characterFont;
+    src: url('Fonts\ANUDRG__.ttf');
+}
+
+.characterText
+{
+    font-family: characterFont;
+}*/
+
+.divTable
+{
+    display: table;
+    width: auto;
+}
+
+.divTableRow
+{
+    width: auto;
+    display: table-row;
+}
+
+.divTableCell
+{
+    width: auto;
+    display: table-cell;
+}
