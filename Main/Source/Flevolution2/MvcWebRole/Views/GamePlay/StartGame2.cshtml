@@ -4,9 +4,7 @@
 
 <h2>StartGame</h2>
 
-<div>
     <div data-bind="foreach: characters">
-        @*<div class="character">*@
             <div class="character divTable" >
                 <div class="divTableRow">
                     <div class="divTableCell">                   
@@ -29,15 +27,14 @@
                         <img data-bind="attr: { src: imagepath, alt: name }" alt="Character" />
                     </div>
                 </div>
-                <div class="divTableRow">
+ @*               <div class="divTableRow">
                     <div class="divTableCell">
                         <strong data-bind="text: name" />
                     </div>
-                </div>
+                </div>*@
             </div>
-        @*</div>*@
     </div>
-</div>
+
 
 <div style="clear: both; ">
     <table>

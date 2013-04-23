@@ -274,6 +274,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Content\Styles.css" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\blackmail.png" />
     <Content Include="Images\char_general.jpg" />
@@ -293,6 +294,7 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\knockout-2.2.1.js" />
+    <Content Include="Scripts\less-1.3.3.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
