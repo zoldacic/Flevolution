@@ -3,7 +3,7 @@
 
 .character {
     float: left;
-    transition: all 1s;
+    -webkit-transition: all 1s;
 
     .character-normal
 }
@@ -54,6 +54,89 @@
     text-decoration: none;
     text-shadow: 1px 1px 0px #528ecc;
 }
+
+.currencySelectionBase
+{
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	display:inline-block;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 11px;
+	text-decoration:none;
+}
+
+.currencySelectionGold(@background)
+{
+	-moz-box-shadow:inset 0px 1px 0px 0px #fff6af;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #fff6af;
+	box-shadow:inset 0px 1px 0px 0px #fff6af;
+	background-color:#ffed64;
+	border:1px solid #dbcc5c;
+    color:#333333;
+    text-shadow:1px 1px 0px #ffee66;
+
+    .currencySelectionBase
+}
+
+.currencySelectionBribe(@background)
+{
+	-moz-box-shadow:inset 0px 1px 0px 0px #c2c2be;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #c2c2be;
+	box-shadow:inset 0px 1px 0px 0px #c2c2be;
+	background-color:#5c5944;
+	border:1px solid #1a1911;
+	color:#333333;
+	text-shadow:1px 1px 0px #e6e6e6;
+
+    .currencySelectionBase
+}
+
+.currencySelectionForce(@background)
+{
+	-moz-box-shadow:inset 0px 1px 0px 0px #f08787;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f08787;
+	box-shadow:inset 0px 1px 0px 0px #f08787;
+	background-color:#f71313;
+	border:1px solid #d62d2d;
+	color:#6e1212;
+	text-shadow:1px 1px 0px #f78c8c;
+
+    .currencySelectionBase
+}
+
+.currencySelectionGoldSelected
+{
+    .currencySelectionGold(#ffed64)
+}
+
+.currencySelectionGoldUnselected
+{
+    .currencySelectionGold(transparent)
+}
+
+.currencySelectionBribeSelected
+{
+    .currencySelectionBribe(#5c5944)
+}
+
+.currencySelectionBribeUnselected
+{
+    .currencySelectionBribe(transparent)
+}
+
+.currencySelectionForceSelected
+{
+    .currencySelectionForce(#5c5944)
+}
+
+.currencySelectionForceUnselected
+{
+    .currencySelectionForce(transparent)
+}
+
 
 /*@font-face
 {

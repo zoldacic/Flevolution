@@ -5,21 +5,13 @@
 <h2>StartGame</h2>
 
     <div data-bind="foreach: characters">
-            <div class="character divTable" >
+        <div class="character">
+            <div class="divTable" >
                 <div class="divTableRow">
                     <div class="divTableCell">                   
-                        <div style="float: left">
-                            <img src="~/Images/gold.png" width="24" height="24" alt="Gold" />
-                        </div>
-                        <div style="float: left">A</div>
-                        <div style="float: left">
-                            <img src="~/Images/blackmail.png" width="24" height="24" alt="Blackmail" />
-                        </div>
-                        <div style="float: left">B</div>
-                        <div style="float: left">
-                            <img src="~/Images/force.png" width="24" height="24" alt="Force" />
-                        </div>
-                        <div style="float: left"></div>
+                        <div class="currencySelectionGoldSelected" style="float: left">A</div>
+                        <div class="currencySelectionBribeSelected" style="float: left">B</div>
+                        <div class="currencySelectionForceSelected" style="float: left">C</div>
                     </div>
                 </div>
                 <div class="divTableRow">
@@ -27,12 +19,13 @@
                         <img data-bind="attr: { src: imagepath, alt: name }" alt="Character" />
                     </div>
                 </div>
- @*               <div class="divTableRow">
+                <div class="divTableRow">
                     <div class="divTableCell">
-                        <strong data-bind="text: name" />
+                        <label data-bind="text: name" />
                     </div>
-                </div>*@
+                </div>
             </div>
+        </div>
     </div>
 
 
