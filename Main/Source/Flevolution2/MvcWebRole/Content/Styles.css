@@ -1,5 +1,6 @@
 ﻿
-
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
 
 .character {
     float: left;
@@ -55,8 +56,19 @@
     text-shadow: 1px 1px 0px #528ecc;
 }
 
+.currencySelectionContainer div:nth-child(1)
+{
+    margin-left: 0em;
+}
+
+.currencySelectionContainer div:nth-child(n+1)
+{
+    margin-left: 1em;
+}
+
 .currencySelectionBase
 {
+    float: left;
 	-moz-border-radius:6px;
 	-webkit-border-radius:6px;
 	border-radius:6px;
@@ -64,8 +76,21 @@
 	font-family:arial;
 	font-size:15px;
 	font-weight:bold;
-	padding:11px 11px;
+	padding:7px 9px;
 	text-decoration:none;
+}
+
+.currencySelectionBase:before 
+{
+     bottom:100%;
+     border:21px solid transparent;
+     border-bottom-color:#bbb;
+     content:"AAA";
+     height:0;left:85%;
+     margin-left:-21px;
+     pointer-events:none;
+     position:absolute;
+     width:0px;    
 }
 
 .currencySelectionGold(@background)
