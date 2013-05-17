@@ -6,36 +6,25 @@
 
     <div data-bind="foreach: characters">
         <div class="character">
-            <div class="divTable" >
-                <div class="divTableRow">
-                    <div class="divTableCell currencySelectionContainer">                   
-                        <div class="currencySelectionGoldSelected">A</div>
-                        <div class="currencySelectionBribeSelected">B</div>
-                        <div class="currencySelectionForceSelected">C</div>
-                    </div>
-                </div>
-                <div class="divTableRow">
-                    <div class="divTableCell">
-                        <img data-bind="attr: { src: imagepath, alt: name }" alt="Character" />
-                    </div>
-                </div>
-                <div class="divTableRow">
-                    <div class="divTableCell">
-                        <label data-bind="text: name" />
-                    </div>
+            <div class="characterImageContainer">
+                <img data-bind="attr: { src: imagepath, alt: name }" alt="Character" />
+            </div>
+            <div class="characterCurrencyGroupContainer">
+                <div class="characterCurrencyGroupContainer">
+                    <label data-bind="text: name" />
                 </div>
             </div>
         </div>
     </div>
 
 
-<div style="clear: both; ">
+@*<div style="clear: both; ">
     <table>
     <tr><td>Gold</td><td style="text-align: left"><input data-bind="click: selectCurrency" type="radio" name="currencySelection" style="width:30px" title="Gold" /></td>
     <td>Blackmail</td><td style="text-align: left"> <input data-bind="click: selectCurrency" style="width:30px" name="currencySelection" type="radio" title="Blackmail" /></td>
     <td>Force</td><td style="text-align: left"> <input data-bind="click: selectCurrency" style="width:30px" name="currencySelection" type="radio" title="Force" /></td></tr>
     </table>
-</div>
+</div>*@
 
 <script type="text/javascript">
     function Character(item) {

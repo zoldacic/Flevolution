@@ -274,7 +274,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Styles.css" />
+    <None Include="Content\Styles.less" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Images\blackmail.png" />
     <Content Include="Images\char_general.jpg" />
@@ -375,7 +375,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>62981</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:49684/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
