@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{43762192-610C-4E24-8183-72112E3FB6F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flevolution3", "Flevolution3\Flevolution3.csproj", "{0FB35085-734A-4AC9-9165-20B60508B7DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{43762192-610C-4E24-8183-72112E3FB6F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43762192-610C-4E24-8183-72112E3FB6F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43762192-610C-4E24-8183-72112E3FB6F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FB35085-734A-4AC9-9165-20B60508B7DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FB35085-734A-4AC9-9165-20B60508B7DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FB35085-734A-4AC9-9165-20B60508B7DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FB35085-734A-4AC9-9165-20B60508B7DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

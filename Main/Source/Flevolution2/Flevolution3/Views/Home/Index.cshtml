@@ -1,0 +1,33 @@
+﻿
+
+<script type="text/javascript">
+    function Purse(data) {
+        var self = this;
+
+        //self.charactername = $root.
+        self.bribeamount = data.BribeAmount;
+        self.blackmailamount = data.BlackmailAmount;
+        self.forceamount = data.ForceAmount;       
+    }
+</script>
+
+<div id="body">
+    <div data-bind="foreach: characters"></div>
+</div>
+
+<pre data-bind="text: ko.toJSON($root)"></pre>
+
+<script type="text/javascript">
+    function FlevolutionViewModel() {
+        var self = this;
+        self.characters = new observableArray([]);
+
+        $.getJSON('/api/values/getpurse', null, function(serverPurse) {
+            self.purse = ko.observable(new Purse(serverPurse));
+        });
+        
+        $.getJSON('/api/values/listcharacters', null, )
+    }
+
+    ko.applyBindings(new FlevolutionViewModel());
+</script>
